@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="guias.Views.NewItemPage" Title="Novo">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="Cancelar_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="cancelar.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Text="Salvar" Clicked="Save_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="salvar.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <TableView Intent="Settings" HasUnevenRows="true">
+            <TableRoot>
+                <TableSection Title="Identificação">
+                    <ViewCell Height="42">
+                        <StackLayout Orientation="Horizontal">
+                            <Picker x:Name="pckCliente" HorizontalOptions="FillAndExpand" Title="Cliente" SelectedItem="{Binding Item.cliente}" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Height="42">
+                        <StackLayout Orientation="Horizontal">
+                            <Picker x:Name="pckCategoria" HorizontalOptions="FillAndExpand" Title="Categoria" SelectedItem="{Binding Item.categoria}" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Height="42">
+                        <StackLayout Orientation="Horizontal">
+                            <Picker x:Name="pckTipo" HorizontalOptions="FillAndExpand" Title="Tipo de atendimento" SelectedItem="{Binding Item.tipo}" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Registro de evento">
+                    <EntryCell Label="Assunto" Placeholder="ex: computador reiniciando" Text="{Binding Item.assunto}" />
+                    <EntryCell Label="Técnico(s)" Placeholder="ex: nome/nome" Text="{Binding Item.tecnico}" />
+                    <ViewCell Height="35">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Margin="18,0,0,0" HorizontalOptions="StartAndExpand" Text="Entrada" VerticalOptions="Center" />
+                            <DatePicker x:Name="pckFiledate" Date="{Binding Item.filedate}" Format="dd/MM/yyyy" TextColor="Gray" />
+                            <TimePicker x:Name="_timefiledate" Format="HH:mm" TextColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Height="42">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Margin="18,0,0,0" HorizontalOptions="StartAndExpand" Text="Fechamento" VerticalOptions="Center" />
+                            <DatePicker x:Name="pckFechamento" Date="{Binding Item.fechamento}" Format="dd/MM/yyyy" TextColor="Gray" />
+                            <TimePicker x:Name="_timefechamento" Format="HH:mm" TextColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Detalhes">
+                    <ViewCell Height="150">
+                        <StackLayout Orientation="Horizontal">
+                            <Editor HorizontalOptions="FillAndExpand" Text="{Binding Item.chamado}" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Fechamento">
+                    <ViewCell Height="150">
+                        <StackLayout Orientation="Horizontal">
+                            <Editor HorizontalOptions="FillAndExpand" Text="{Binding Item.resposta}" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:guias.Models"
+            x:Class="guias.Views.Settings" Title="Configurações">
+    <ContentPage.Content>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Geral">
+                    <EntryCell Label="Nome do Técnico" Placeholder="Seu nome" />
+                </TableSection>
+                <TableSection Title="Padrões de atendimento">
+                    <ViewCell Tapped="ConfigurarClientes">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{local:ImageResource clientes.png}" WidthRequest="15" HeightRequest="15"/>
+                            <Label Text="Clientes" VerticalOptions="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Tapped="ConfigurarContratos">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{local:ImageResource guias.img.contratos.png}" WidthRequest="15" HeightRequest="15" />
+                            <Label Text="Categorias de contrato" VerticalOptions="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Tapped="ConfigurarTipos">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{local:ImageResource guias.img.tiposdeatendimento.png}" WidthRequest="15" HeightRequest="15" />
+                            <Label Text="Tipos de atendimento" VerticalOptions="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

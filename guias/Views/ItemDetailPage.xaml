@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:guias.Models" x:Class="guias.Views.ItemDetailPage" Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <!--ToolbarItem Text="Remover" Clicked="RemoverItem" /-->
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="Start" Padding="0">
+            <StackLayout BackgroundColor="#FFFFFF" Spacing="10" Padding="10">
+                <StackLayout Orientation="Horizontal">
+                    <Image HorizontalOptions="Start" Source="{Binding Item.Image}" WidthRequest="15" HeightRequest="15" />
+                    <Label Text="{Binding Item.id}" TextColor="Gray" Font="13" />
+                    <Label Text="{Binding Item.assunto}" TextColor="Gray" Font="13" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Entrada:" Font="13" />
+                    <Label Text="{Binding Item.filedate}" TextColor="Gray" Font="13" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fechamento:" Font="13" />
+                    <Label Text="{Binding Item.fechamento}" TextColor="Gray" Font="13" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Técnico(s):" Font="13" />
+                    <Label Text="{Binding Item.tecnico}" TextColor="Gray" Font="13" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image HorizontalOptions="Start" Source="{Binding Item.TipoAtendimento}" WidthRequest="15" HeightRequest="15" />
+                    <Label Text="{Binding Item.categoria}" TextColor="Gray" Font="13" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        <ScrollView>
+            <StackLayout Spacing="10" Padding="10">
+                <Label Text="Cliente:" Font="14" />
+                <Label Text="{Binding Item.cliente}" TextColor="Gray" Font="13" />
+                <Label Text="Chamado:" Font="14" />
+                <Label Text="{Binding Item.chamado}" TextColor="Gray" Font="13" />
+                <Label Text="Atendimento:" Font="14" />
+                <Label Text="{Binding Item.resposta}" TextColor="Gray" Font="13" />
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

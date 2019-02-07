@@ -1,0 +1,74 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1009999" />  
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="img\24horas.png" />
+    <None Remove="img\cftv.png" />
+    <None Remove="img\ctrlacc.png" />
+    <None Remove="img\supinf.png" />
+    <None Remove="img\localizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\ItemsPage.xaml" />
+    <EmbeddedResource Remove="Views\ListaAtendimentos.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\24horas.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\cftv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\ctrlacc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\supinf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="img\localizar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>guias.img.localizar.png</LogicalName>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="img\search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>guias.img.search.png</LogicalName>
+    </None>
+    <None Update="img\tiposdeatendimento.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>guias.img.tiposdeatendimento.png</LogicalName>
+    </None>
+    <None Update="img\contratos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>guias.img.contratos.png</LogicalName>
+    </None>
+    <None Update="img\clientes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>guias.img.clientes.png</LogicalName>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\FridgeContentPageRenderer.cs" />
+    <Compile Remove="Views\ItemsPage.xaml.cs" />
+    <Compile Remove="Views\ConfigClientes.xaml.cs" />
+  </ItemGroup>
+</Project>

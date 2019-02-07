@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="guias.Views.Atendimentos" Title="Atendimentos">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adicionar" Clicked="AddItem_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="adicionar.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ItemsListView" SeparatorColor="Gray" ItemsSource="{Binding Items}" VerticalOptions="FillAndExpand" HasUnevenRows="true" RefreshCommand="{Binding LoadItemsCommand}" IsPullToRefreshEnabled="true" IsRefreshing="{Binding IsBusy, Mode=OneWay}" CachingStrategy="RecycleElement" ItemSelected="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="OnClone" CommandParameter="{Binding .}" Text="Clonar" />
+                                <MenuItem Clicked="OnEdit" CommandParameter="{Binding .}" Text="Editar" />
+                                <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Remover" IsDestructive="true" />
+                            </ViewCell.ContextActions>
+                            <StackLayout Padding="10" MinimumHeightRequest="900">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Image}" WidthRequest="15" HeightRequest="15" />
+                                    <Label Text="{Binding assunto}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="16" Font="Bold,16" />
+                                    <Label HorizontalOptions="EndAndExpand" Text="{Binding DataAtendimento}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="13" TextColor="Gray" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding RespostaChamado}" LineBreakMode="WordWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13" TextColor="Gray"/>
+                                    <Image HorizontalOptions="End" Source="{Binding TipoAtendimento}" WidthRequest="15" HeightRequest="15"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
