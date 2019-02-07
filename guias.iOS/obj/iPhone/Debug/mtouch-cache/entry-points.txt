@@ -1,0 +1,31 @@
+Function=xamarin_timezone_get_data
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_log
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_find_protocol_wrapper_type
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_release_block_on_main_thread
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_get_block_descriptor
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSend_IntPtr
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSendSuper_IntPtr
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=UIApplicationMain
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_start_wwan
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/System.dll
+Function=CreateZStream
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/System.dll
+Function=CloseZStream
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/System.dll
+Function=Flush
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/System.dll
+Function=ReadZStream
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/System.dll
+Function=WriteZStream
+	/Users/oberdanbrito/Projects/guias/guias.iOS/obj/iPhone/Debug/mtouch-cache/1-Link/System.dll
+Function=mono_pmip
